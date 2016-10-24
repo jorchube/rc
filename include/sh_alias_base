@@ -1,0 +1,11 @@
+if [ $(uname) == "Linux" ]; then
+	alias ls='ls --color=auto'
+fi
+
+if [ $(uname) == "Darwin" ]; then
+	alias ls='ls -G'
+fi
+
+alias ll='ls -lh'
+alias lla='ls -lha'
+alias tmux='tmux -2'

@@ -1,0 +1,9 @@
+
+-- Current symlinks:
+
+~/.bash_profile -> .rc/bashrc
+~/.vim -> .rc/vim
+~/.vimrc -> .rc/vimrc
+~/.zshrc -> .rc/zshrc
+
+

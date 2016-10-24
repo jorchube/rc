@@ -1,0 +1,4 @@
+# This has to be sourced after any $PATH modification if tmux is in the newly added paths
+
+[[ $TMUX == "" ]] && exec tmux -2
+

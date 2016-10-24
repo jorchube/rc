@@ -1,0 +1,11 @@
+function window_size() {
+	default_width=80
+	default_height=24
+
+	new_width=$(( $1 * default_width ))
+	new_height=$(( $2 * default_height ))
+
+	echo -e "Resize to $new_width x $new_height"
+
+	printf '\e[8;%d;%dt' $new_height $new_width
+}
