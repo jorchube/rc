@@ -28,6 +28,10 @@ $bold_blue_fg> $reset"
 POWERLINE_LITE="$bold_blue_bg \u $reset $gray_fg\w
 $bold_blue_fg> $reset"
 
-PS1=$POWERLINE_LITE
+EXIT_STATUS="$gray_fg[result: \$?]
+$reset[$bold_blue_fg\u$reset@$blue_fg\h $gray_fg\w$reset]\$ "
 
+REDHAT_COLORED="$reset[$bold_blue_fg\u$reset@$blue_fg\h $gray_fg\w$reset]\$ "
+
+PS1=$REDHAT_COLORED
 
