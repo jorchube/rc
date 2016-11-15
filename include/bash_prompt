@@ -34,5 +34,7 @@ $reset[$bold_blue_fg\u$reset@$blue_fg\h $gray_fg\w$reset]\$ "
 
 REDHAT_COLORED="$reset[$bold_green_fg\u$reset@$green_fg\h $gray_fg\w$reset]\$ "
 
-PS1=$REDHAT_COLORED
+MINI_GRAY="$reset[$gray_fg\u$reset $dark_gray_fg\w$reset]\$ "
+
+PS1=$MINI_GRAY
 
