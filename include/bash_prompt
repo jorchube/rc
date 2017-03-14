@@ -9,7 +9,7 @@ red_fg="\[\033[0;31m\]"
 yellow_fg="\[\033[0;33m\]"
 bold_yellow_fg="\[\033[1;33m\]"
 gray_fg="\[\033[0;37m\]"
-dark_gray_fg="\[\033[1;30m\]"
+bold_gray_fg="\[\033[1;30m\]"
 
 
 blue_bg="\[\033[0;44m\]"
@@ -23,6 +23,9 @@ gray_bg="\[\033[0;47m\]"
 BASIC="$bold[\u@\h \w]
 >$regular "
 
+MEDIUM="$bold\u $reset\w
+$bold> $reset"
+
 POWERLINE="$bold_blue_bg \u $reset $gray_fg\h $bold\w
 $bold_blue_fg> $reset"
 
@@ -34,7 +37,7 @@ $reset[$bold_blue_fg\u$reset@$blue_fg\h $gray_fg\w$reset]\$ "
 
 REDHAT_COLORED="$reset[$bold_green_fg\u$reset@$green_fg\h $gray_fg\w$reset]\$ "
 
-MINI_GRAY="$reset[$gray_fg\u$reset $dark_gray_fg\w$reset]\$ "
+MINI_GRAY="$reset[$gray_fg\u$reset $bold_gray_fg\w$reset]\$ "
 
-PS1=$MINI_GRAY
+PS1=$MEDIUM
 
