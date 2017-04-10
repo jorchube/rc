@@ -40,6 +40,9 @@ BASIC="$bold[\u@\h \w]
 MEDIUM="$bold\u $reset\w
 $bold>$reset "
 
+MEDIUM="$bold\u $reset\w
+$bold> $reset"
+
 POWERLINE="$bold_blue_bg \u $reset $gray_fg\h $bold\w
 $bold_blue_fg> $reset"
 
@@ -51,7 +54,7 @@ $reset[$bold_blue_fg\u$reset@$blue_fg\h $gray_fg\w$reset]\$ "
 
 REDHAT_COLORED="$reset[$bold_green_fg\u$reset@$green_fg\h $gray_fg\w$reset]\$ "
 
-MINI_GRAY="$reset[$bold\u$reset $bold_gray_fg\w$reset]\$ "
+MINI_GRAY="$reset[$gray_fg\u$reset $bold_gray_fg\w$reset]\$ "
 
 MINI_COLOR="$bold_green_fg[$reset$bold\u$reset $bold_gray_fg\w$bold_green_fg]$reset$bold\$$reset "
 
@@ -73,3 +76,4 @@ PROMPT_COMMAND='__dynamic_prompt'
 #PS1=$MINI_COLOR
 
 #dynamic prompt collides with a statis $PS1
+
