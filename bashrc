@@ -15,7 +15,7 @@ export EDITOR=vim
 source ~/.rc/include/bash_prompt
 source ~/.rc/include/sh_alias_base
 
-source ~/.rc/include/sh_macports
+source ~/.rc/include/sh_path
 
 #source ~/.rc/mod/tmux_as_shell
 
