@@ -21,19 +21,6 @@ yellow_bg="\[\033[0;43m\]"
 gray_bg="\[\033[0;47m\]"
 
 
-
-exit_code_to_color() {
-	echo -n "$1"
-	if [[ $0 == 0 ]]; then
-		echo -n "$bold_green_fg"
-	else 
-		echo -n "$bold_red_fg"
-	fi
-}
-
-
-
-
 BASIC="$bold[\u@\h \w]
 >$reset "
 
@@ -63,12 +50,12 @@ __dynamic_prompt() {
 	rc=$?
 	RCC=""
 	if [[  $rc != 0 ]]; then 
-		RCC="$bold_red_fg"
+		RCC="$red_fg"
 	else
-		RCC="$bold_green_fg"
+		RCC="$green_fg"
 	fi
 
-	PS1="$RCC[$reset$bold\u$reset $bold_gray_fg\w$RCC]$reset$bold\$$reset "
+	PS1="$RCC[$reset$yellow_fg\u$reset $gray_fg\w$RCC]$reset\$$reset "
 }
 
 
