@@ -55,7 +55,7 @@ __dynamic_prompt() {
 		RCC="$green_fg"
 	fi
 
-	PS1="$RCC[$reset$yellow_fg\u$reset $gray_fg\w$RCC]$reset\$$reset "
+	PS1="$RCC[$reset$yellow_fg\u$reset $gray_fg\w$RCC]\$$reset "
 }
 
 
