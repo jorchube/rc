@@ -55,12 +55,12 @@ __dynamic_prompt() {
 		RCC="$green_fg"
 	fi
 
-	PS1="$RCC[$reset$yellow_fg\u$reset $gray_fg\w$RCC]\$$reset "
+	PS1="[$green_fg\u$reset@$yellow_fg\h$reset $blue_fg\w$reset]$RCC\$$reset "
 }
 
 
 PROMPT_COMMAND='__dynamic_prompt'
 #PS1=$MINI_COLOR
 
-#dynamic prompt collides with a statis $PS1
+#dynamic prompt collides with a static $PS1
 
