@@ -1,0 +1,8 @@
+OS=$(uname)
+
+HEIGHT=550
+WIDTH=800
+
+if [[ "$OS" == "Linux" ]]; then
+	wmctrl -r :ACTIVE: -e 0,-1,-1,$WIDTH,$HEIGHT
+fi
