@@ -1,6 +1,6 @@
 # This has to be sourced after any $PATH modification if tmux is in the newly added paths
 
-[[ $ORG_JORCHUBE_RC_TMUX_AS_SHELL == 1 &&  $TMUX == "" ]] && exec tmux -2
+if [[ $ORG_JORCHUBE_RC_TMUX_AS_SHELL == 1 &&  $TMUX == "" ]]; then
+	exec tmux -2
+fi
 
-# Hack to restore $? to OK if tmux is not enabled as shell
-echo -n
