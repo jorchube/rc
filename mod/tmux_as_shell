@@ -2,3 +2,5 @@
 
 [[ $ORG_JORCHUBE_RC_TMUX_AS_SHELL == 1 &&  $TMUX == "" ]] && exec tmux -2
 
+# Hack to restore $? to OK if tmux is not enabled as shell
+echo -n
