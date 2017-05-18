@@ -1,0 +1,62 @@
+#!/bin/bash
+
+bold="\[\033[1;1m\]"
+reset="\[\033[0;0m\]"
+
+blue_fg="\[\033[0;34m\]"
+bold_blue_fg="\[\033[1;34m\]"
+green_fg="\[\033[0;32m\]"
+bold_green_fg="\[\033[1;32m\]"
+red_fg="\[\033[0;31m\]"
+bold_red_fg="\[\033[1;31m\]"
+yellow_fg="\[\033[0;33m\]"
+bold_yellow_fg="\[\033[1;33m\]"
+gray_fg="\[\033[0;37m\]"
+bold_gray_fg="\[\033[1;30m\]"
+
+
+blue_bg="\[\033[0;44m\]"
+bold_blue_bg="\[\033[1;44m\]"
+green_bg="\[\033[0;42m\]"
+red_bg="\[\033[0;41m\]"
+yellow_bg="\[\033[0;43m\]"
+gray_bg="\[\033[0;47m\]"
+
+
+BASIC="$bold[\u@\h \w]
+>$reset "
+
+MEDIUM="$bold\u $reset\w
+$bold>$reset "
+
+MEDIUM="$bold\u $reset\w
+$bold> $reset"
+
+POWERLINE="$bold_blue_bg \u $reset $gray_fg\h $bold\w
+$bold_blue_fg> $reset"
+
+POWERLINE_LITE="$bold_blue_bg \u $reset $gray_fg\w
+$bold_blue_fg> $reset"
+
+EXIT_STATUS="$gray_fg[result: \$?]
+$reset[$bold_blue_fg\u$reset@$blue_fg\h $gray_fg\w$reset]\$ "
+
+REDHAT_COLORED="$reset[$bold_green_fg\u$reset@$green_fg\h $gray_fg\w$reset]\$ "
+
+MINI_GRAY="$reset[$gray_fg\u$reset $bold_gray_fg\w$reset]\$ "
+
+MINI_COLOR="$bold_green_fg[$reset$bold\u$reset $bold_gray_fg\w$bold_green_fg]$reset$bold\$$reset "
+
+
+__dynamic_prompt() {
+	rc=$?
+	RCC=""
+	if [[  $rc != 0 ]]; then 
+		RCC="$red_fg"
+	else
+		RCC="$green_fg"
+	fi
+
+	PS1="[$green_fg\u$reset@$yellow_fg\h$reset $blue_fg\w$reset]$RCC\$$reset "
+}
+

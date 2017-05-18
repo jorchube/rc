@@ -3,19 +3,17 @@
 export LANG="C"
 export LC_ALL="C"
 
+
+source ~/.rc/config.sh
+
 #### /env vars ####
 
-export TERM=xterm-256color
+export TERM=$ORG_JORCHUBE_RC_TERM
 
-export EDITOR=vim
+export EDITOR=$ORG_JORCHUBE_RC_EDITOR
 #export VISUAL=vim
 #set -o vi
 #export XDG_CONFIG_HOME=/home/jchulia
 
-source ~/.rc/include/bash_prompt
-source ~/.rc/include/sh_alias_base
-
-source ~/.rc/include/sh_path
-
-#source ~/.rc/mod/tmux_as_shell
+source ~/.rc/includes.list
 

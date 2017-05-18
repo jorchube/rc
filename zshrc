@@ -10,8 +10,5 @@ export LC_ALL="en_US.UTF-8"
 #export TERM="xterm-256color"
 
 
-source ~/.rc/include/zsh_prompt
-source ~/.rc/include/zsh_options
-source ~/.rc/include/zsh_func
-source ~/.rc/include/sh_alias_base
+source ~/.rc/includes.list
 

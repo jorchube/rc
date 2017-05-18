@@ -1,8 +1,8 @@
 OS=$(uname)
 
-HEIGHT=550
-WIDTH=800
+HEIGHT=$ORG_JORCHUBE_RC_HEIGHT
+WIDTH=$ORG_JORCHUBE_RC_WIDTH
 
-if [[ "$OS" == "Linux" ]]; then
+if [[ $ORG_JORCHUBE_RC_FORCE_SIZE == 1 && "$OS" == "Linux" ]]; then
 	wmctrl -r :ACTIVE: -e 0,-1,-1,$WIDTH,$HEIGHT
 fi
