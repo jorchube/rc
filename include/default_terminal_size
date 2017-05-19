@@ -6,3 +6,9 @@ WIDTH=$ORG_JORCHUBE_RC_WIDTH
 if [[ $ORG_JORCHUBE_RC_FORCE_SIZE == 1 && "$OS" == "Linux" ]]; then
 	wmctrl -r :ACTIVE: -e 0,-1,-1,$WIDTH,$HEIGHT
 fi
+
+
+function termsize() {
+	echo -n
+	wmctrl -r :ACTIVE: -e 0,-1,-1,$WIDTH,$HEIGHT
+}
