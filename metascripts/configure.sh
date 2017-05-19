@@ -6,6 +6,8 @@ vimdir="$HOME/.vim"
 zshrc="$HOME/.zshrc"
 tmuxconf="$HOME/.tmux.conf"
 
+configexample="$HOME/.rc/sample/config.sh.example"
+
 oldext="old"
 
 function prepare {
@@ -14,6 +16,11 @@ function prepare {
 		mv $1 $1.$oldext
 		echo "Preexisting $1 has been renamed to $1.$oldext"
 	fi
+}
+
+
+function config_file {
+	cp $configexample $HOME/.rc/config.sh 
 }
 
 function main {
@@ -37,3 +44,4 @@ function dbg {
 
 #dbg
 main
+config_file
