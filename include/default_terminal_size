@@ -8,7 +8,7 @@ if [[ $ORG_JORCHUBE_RC_FORCE_SIZE == 1 && "$OS" == "Linux" ]]; then
 fi
 
 
-function termsize() {
+function winsize() {
 	echo -n
 	wmctrl -r :ACTIVE: -e 0,-1,-1,$WIDTH,$HEIGHT
 }
