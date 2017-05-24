@@ -1,4 +1,4 @@
-source ~/.rc/include/bash_prompt
+source ~/.rc/include/sh_prompt
 source ~/.rc/include/sh_alias_base
 source ~/.rc/include/sh_path
 source ~/.rc/include/default_terminal_size

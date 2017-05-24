@@ -1,8 +1,8 @@
-if [ $(uname) == "Linux" ]; then
+if [[ $(uname) == "Linux" ]]; then
 	alias ls='ls --color=auto'
 fi
 
-if [ $(uname) == "Darwin" ]; then
+if [[ $(uname) == "Darwin" ]]; then
 	alias ls='ls -G'
 fi
 

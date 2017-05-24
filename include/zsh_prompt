@@ -1,2 +1,0 @@
-export PROMPT='%B[%n@%m %~]
->%b '

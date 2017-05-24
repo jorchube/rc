@@ -1,8 +1,0 @@
-
-
-
-PS1=$MINI_COLOR
-
-if [[ $ORG_JORCHUBE_RC_DYNAMIC_PROMPT == 1 ]]; then
-	PROMPT_COMMAND='__dynamic_prompt'
-fi
