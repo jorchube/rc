@@ -4,6 +4,10 @@ promptinit
 autoload -U colors && colors
 
 setopt PROMPT_SUBST
+setopt APPEND_HISTORY
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.zsh_history
 
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"

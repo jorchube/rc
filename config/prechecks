@@ -1,0 +1,7 @@
+
+IS_BASH=false
+IS_ZSH=false
+
+[[ $BASH_VERSION != ''  ]]    &&  IS_BASH=true
+[[ $ZSH_VERSION != ''  ]] &&  IS_ZSH=true
+

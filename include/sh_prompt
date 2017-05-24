@@ -1,6 +1,6 @@
 PS1=$ORG_JORCHUBE_RC_PROMPT
 
 if [[ $ORG_JORCHUBE_RC_DYNAMIC_PROMPT == 1 ]]; then
-	[[ "$SHELL" == "/bin/bash" ]]     &&  PROMPT_COMMAND='__dynamic_prompt'
-	[[ "$SHELL" == "/usr/bin/zsh" ]] &&  precmd() { __dynamic_prompt; }
+	[[ $IS_BASH == true ]]  &&  PROMPT_COMMAND='__dynamic_prompt'
+	[[ $IS_ZSH == true ]]   &&  precmd() { __dynamic_prompt; }
 fi
