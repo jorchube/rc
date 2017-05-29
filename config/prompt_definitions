@@ -33,10 +33,10 @@ __dynamic_prompt() {
 	rc=$?
 	RCC=""
 	if [[  $rc != 0 ]]; then 
-		RCC="$red_fg"
+		RCC="$reset$red_fg"
 	else
-		RCC="$green_fg"
+		RCC="$reset$green_fg"
 	fi
 
-	PS1="$PROMPT_OPEN$green_fg$PROMPT_USER$reset$PROMPT_AT$yellow_fg$PROMPT_HOST$reset $blue_fg$PROMPT_DIR$reset$PROMPT_CLOSE$RCC$PROMPT_IND$reset "
+	PS1="$bold$PROMPT_OPEN$bold_green_fg$PROMPT_USER$reset$PROMPT_AT$bold_yellow_fg$PROMPT_HOST$reset:$bold_blue_fg$PROMPT_DIR$reset$bold$PROMPT_CLOSE$RCC$PROMPT_IND$reset "
 }

@@ -1,8 +1,0 @@
-setopt HIST_IGNORE_DUPS     # avoid duplicates in history
-setopt HIST_IGNORE_SPACE    # avoid space-starting commands in history
-setopt MULTIBYTE            # multibyte / unicode characters
-setopt CORRECT
-setopt INTERACTIVECOMMENTS
-HISTFILE=~/.zsh_history
-HISTSIZE=1000
-SAVEHIST=1000
