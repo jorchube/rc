@@ -21,8 +21,17 @@ tmux_buffers = \
     tmux save-buffer -b n file.txt
 """
 
+tmux_session = \
+"""
+- sessions:
+    list sessions: tmux list-session
+    attach to session: tmux attach -t n
+    attach as grouped sesison: tmux new-session -t n
+    detach session: Control+b :detach
+    end session: Control+b :kill-session
+"""
 
-tmux_tips = [tmux_cp, tmux_buffers]
+tmux_tips = [tmux_cp, tmux_buffers, tmux_session]
 vim_tips = []
 
 def print_title(title):
