@@ -31,7 +31,14 @@ tmux_session = \
     end session: Control+b :kill-session
 """
 
-tmux_tips = [tmux_cp, tmux_buffers, tmux_session]
+tmux_window = \
+"""
+- windows:
+    move window to other session: move-window -t target-session
+"""
+
+
+tmux_tips = [tmux_cp, tmux_buffers, tmux_session, tmux_window]
 vim_tips = []
 
 def print_title(title):
