@@ -34,7 +34,7 @@ tmux_session = \
 tmux_window = \
 """
 - windows:
-    move window to other session: move-window -t target-session
+    move window to other session: move-window -t target-session:
 """
 
 
