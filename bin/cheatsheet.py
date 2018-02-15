@@ -2,6 +2,7 @@
 
 import sys
 
+
 tmux_cp = \
 """
 - copy & paste (buffers):
@@ -38,8 +39,23 @@ tmux_window = \
 """
 
 
-tmux_tips = [tmux_cp, tmux_buffers, tmux_session, tmux_window]
-vim_tips = []
+i3wm_moving_aroung = \
+"""
+- moving around:
+    open terminal: Mod+Enter
+    
+"""
+
+tmux_tips   = [tmux_cp, tmux_buffers, tmux_session, tmux_window]
+vim_tips    = []
+i3wm_tips   = []
+
+component_tips_dict = {
+        'tmux' : tmux_tips,
+        'vim'  : vim_tips,
+        'i3wm' : i3wm_tips
+        }
+
 
 def print_title(title):
     print "--------"
@@ -47,28 +63,26 @@ def print_title(title):
     print "--------"
 
 
-def print_tmux():
-    print_title("TMUX")
-    for tip in tmux_tips:
-        print tip
+def print_component(component):
+    if component not in component_tips_dict:
+        return
 
-
-def print_vim():
-    print_title("VIM")
-    for tip in vim_tips:
-        print tip
+    print_title(component.upper())
+    for tips in component_tips_dict[component]:
+        print tips
 
  
 def print_all():
-    print_tmux()
-    #print_vim()
+    for component in component_tips_dict:
+        print_component(component)
+        print ''
+
 
 if len(sys.argv) == 1:
     print_all()
+    exit(0)
 
-if 'tmux' in sys.argv:
-    print_tmux()
 
-if 'vim' in sys.argv:
-    print_vim()
+for arg in sys.argv[1:]:
+    print_component(arg)
 
