@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=i3wm custom jorchube Session
+Exec=/home/jorchube/.rc/i3wm/session_launcher.sh
+Type=Application
