@@ -17,7 +17,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 12
+font pango:DejaVu Sans Mono 8
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -161,8 +161,8 @@ bar {
     status_command i3status
 }
 
-gaps inner 15
-gaps outer 0
+#gaps inner 15
+#gaps outer 0
 
 #default colors:
 # class                 border  backgr. text    indicator child_border
@@ -176,11 +176,10 @@ gaps outer 0
 
 
 # class                 border  backgr. text    indicator child_border
-#Adwaita:
-client.focused           #4a90d9 #4a90d9 #ffffff #8efec4   #4a90d9
+# -- Adwaita --
+#client.focused           #4a90d9 #4a90d9 #ffffff #8efec4   #4a90d9
 # client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 # client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 # client.urgent           #2f343a #900000 #ffffff #900000   #900000
 # client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-#
 # client.background       #ffffff
