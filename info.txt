@@ -1,9 +1,6 @@
-
--- Current symlinks:
-
-~/.bash_profile -> .rc/bashrc
-~/.vim -> .rc/vim
-~/.vimrc -> .rc/vimrc
-~/.zshrc -> .rc/zshrc
-
+Packages:
+    i3 (i3-gaps recommended)
+    compton
+    nm-applet
+    pcmanfm
 
