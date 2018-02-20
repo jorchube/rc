@@ -1,6 +1,8 @@
 #!/bin/bash
 
-/usr/bin/xfsettingsd &
+#/usr/bin/xfsettingsd &
+#/usr/bin/xsettingsd &
+xrdb -merge ./.Xresources
 /usr/bin/compton &
 /usr/bin/nm-applet &
 
