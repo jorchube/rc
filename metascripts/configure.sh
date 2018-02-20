@@ -1,16 +1,20 @@
 #!/bin/bash
 
+conf_folder_i3="$HOME/.config/i3"
+conf_folder_gtk3="$HOME/.config/gtk-3.0"
+conf_folder_dunst="$HOME/.config/dunst"
+
 bashrc="$HOME/.bash_profile"
 zshrc="$HOME/.zshrc"
 vimrc="$HOME/.vimrc"
 vimdir="$HOME/.vim"
 tmuxconf="$HOME/.tmux.conf"
-i3conf="$HOME/.config/i3/config"
+i3conf="$conf_folder_i3/config"
 comptonconf="$HOME/.config/compton.conf"
 xresourcesconf="$HOME/.Xresources"
 gtk2conf="$HOME/.gtkrc-2.0"
-gtk3conf="$HOME/.config/gtk-3.0/settings.ini"
-
+gtk3conf="$conf_folder_gtk3/settings.ini"
+gtk3conf="$conf_folder_dunst/dunstrc"
 
 LOCALCONF_PATH="$HOME/.rc/local.conf.d"
 
@@ -91,6 +95,10 @@ function set_all_components {
 
 mv "$LOCALCONF_PATH" "$LOCALCONF_PATH.$oldext"
 mkdir "$LOCALCONF_PATH"
+
+mkdir "$conf_folder_i3"
+mkdir "$conf_folder_gtk3"
+mkdir "$conf_folder_dunst"
 
 set_all_components
 set_config_file
