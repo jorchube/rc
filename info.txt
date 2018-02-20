@@ -4,4 +4,6 @@ Packages:
     compton
     nm-applet
     pcmanfm
+    mate-terminal
+    x11-xserver-utils
 

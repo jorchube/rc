@@ -1,1 +1,1 @@
-export PATH="~/.rc/bin:$PATH"
+export PATH="~/.rc/bin:/opt/bin:$PATH"
