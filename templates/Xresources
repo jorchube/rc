@@ -1,0 +1,9 @@
+Xft.dpi: 168
+Xft.antialias: 1
+Xft.hintStyle: hintfull
+Xft.hinting: 1
+Xft.rgba: none
+Xft.lcdfilter: none
+
+Xcursor.size: 48
+!Theming: ~/.config/gtk-3.0/settings.ini

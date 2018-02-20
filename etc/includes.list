@@ -1,0 +1,6 @@
+source ~/.rc/etc/include/sh_prompt
+source ~/.rc/etc/include/sh_alias_base
+source ~/.rc/etc/include/sh_path
+
+# This has to be the last one
+source ~/.rc/etc/include/mod/tmux_as_shell

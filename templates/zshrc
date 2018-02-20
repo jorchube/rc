@@ -18,11 +18,10 @@ HISTFILE=~/.zsh_history
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
-source ~/.rc/config.sh
+source ~/.rc/local.conf.d/config.sh
 
 export TERM=$ORG_JORCHUBE_RC_TERM
 export EDITOR=$ORG_JORCHUBE_RC_EDITOR
 bindkey -e
 
-source ~/.rc/includes.list
-
+source ~/.rc/etc/includes.list

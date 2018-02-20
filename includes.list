@@ -1,6 +1,0 @@
-source ~/.rc/include/sh_prompt
-source ~/.rc/include/sh_alias_base
-source ~/.rc/include/sh_path
-
-# This has to be the last one
-source ~/.rc/mod/tmux_as_shell

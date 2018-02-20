@@ -7,7 +7,7 @@
 #
 #
 
-source ~/.rc/config/prechecks
+source ~/.rc/etc/prechecks
 
 # Configuration variables for all of the possible settings on this rc bundle of scripts
 # (Besides app-specific)
@@ -26,7 +26,7 @@ ORG_JORCHUBE_RC_EDITOR=vim
 
 
 # Prompt: (These two are not compatible)
-source ~/.rc/config/prompt_definitions
+source ~/.rc/etc/prompt_definitions
 ORG_JORCHUBE_RC_PROMPT=$MINI_COLOR
 ORG_JORCHUBE_RC_DYNAMIC_PROMPT=0
 

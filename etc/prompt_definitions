@@ -1,7 +1,7 @@
 #!/bin/sh
 
-[[ $IS_BASH == true  ]]    &&  source ~/.rc/config/prompt_definitions.d/bash_prompt_definitions
-[[ $IS_ZSH == true  ]] &&  source ~/.rc/config/prompt_definitions.d/zsh_prompt_definitions
+[[ $IS_BASH == true  ]]    &&  source ~/.rc/etc/prompt_definitions.d/bash_prompt_definitions
+[[ $IS_ZSH == true  ]] &&  source ~/.rc/etc/prompt_definitions.d/zsh_prompt_definitions
 
 BASIC="$bold$PROMPT_OPEN$PROMPT_USER$PROMPT_AT$PROMPT_HOST $PROMPT_DIR$PROMPT_CLOSE
 >$reset "
@@ -31,7 +31,7 @@ MINI_COLOR="$bold_green_fg$PROMPT_OPEN$reset$bold$PROMPT_USER$reset $bold_gray_f
 __dynamic_prompt() {
 	rc=$?
 	RCC=""
-	if [[  $rc != 0 ]]; then 
+	if [[  $rc != 0 ]]; then
 		RCC="$reset$red_fg"
 	else
 		RCC="$reset$green_fg"
