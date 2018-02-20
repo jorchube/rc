@@ -1,4 +1,5 @@
 Packages:
+    lightdm
     i3 (i3-gaps recommended)
     compton
     nm-applet
