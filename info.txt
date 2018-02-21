@@ -6,4 +6,5 @@ Packages:
     pcmanfm
     mate-terminal
     x11-xserver-utils
+    feh
 
