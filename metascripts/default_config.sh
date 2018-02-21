@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ./common.include
+
 conf_folder_i3="$HOME/.config/i3"
 conf_folder_gtk3="$HOME/.config/gtk-3.0"
 conf_folder_dunst="$HOME/.config/dunst"
@@ -14,9 +16,7 @@ comptonconf="$HOME/.config/compton.conf"
 xresourcesconf="$HOME/.Xresources"
 gtk2conf="$HOME/.gtkrc-2.0"
 gtk3conf="$conf_folder_gtk3/settings.ini"
-gtk3conf="$conf_folder_dunst/dunstrc"
-
-LOCALCONF_PATH="$HOME/.rc/local.conf.d"
+dunstconf="$conf_folder_dunst/dunstrc"
 
 custom_bashrc="$LOCALCONF_PATH/bash.conf"
 custom_zshrc="$LOCALCONF_PATH/zsh.conf"
@@ -28,8 +28,7 @@ custom_comptonconf="$LOCALCONF_PATH/compton.conf"
 custom_xresourcesconf="$LOCALCONF_PATH/Xresources.conf"
 custom_gtk2conf="$LOCALCONF_PATH/gtk2.conf"
 custom_gtk3conf="$LOCALCONF_PATH/gtk3.conf"
-
-TEMPLATES_PATH="$HOME/.rc/templates"
+custom_dunstconf="$LOCALCONF_PATH/dunst.conf"
 
 template_bashrc="$TEMPLATES_PATH/bashrc"
 template_zshrc="$TEMPLATES_PATH/zshrc"
@@ -41,6 +40,7 @@ template_comptonconf="$TEMPLATES_PATH/compton.conf"
 template_xresourcesconf="$TEMPLATES_PATH/Xresources"
 template_gtk2conf="$TEMPLATES_PATH/gtkrc-2.0"
 template_gtk3conf="$TEMPLATES_PATH/gtk3.settings.ini"
+template_dunstconf="$TEMPLATES_PATH/dunstrc"
 
 template_main_config="$TEMPLATES_PATH/config.sh"
 
@@ -91,14 +91,15 @@ function set_all_components {
     set_component "$xresourcesconf"    "$custom_xresourcesconf"   "$template_xresourcesconf"
     set_component "$gtk2conf"    "$custom_gtk2conf"   "$template_gtk2conf"
     set_component "$gtk3conf"    "$custom_gtk3conf"   "$template_gtk3conf"
+    set_component "$dunstconf"    "$custom_dunstconf"   "$template_dunstconf"
 }
 
 mv "$LOCALCONF_PATH" "$LOCALCONF_PATH.$oldext"
 mkdir "$LOCALCONF_PATH"
 
-mkdir "$conf_folder_i3"
-mkdir "$conf_folder_gtk3"
-mkdir "$conf_folder_dunst"
+mkdir "$conf_folder_i3" 2> /dev/null
+mkdir "$conf_folder_gtk3" 2> /dev/null
+mkdir "$conf_folder_dunst" 2> /dev/null
 
 set_all_components
 set_config_file

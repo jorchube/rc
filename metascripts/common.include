@@ -1,0 +1,3 @@
+TEMPLATES_PATH="$HOME/.rc/templates"
+LOCALCONF_PATH="$HOME/.rc/local.conf.d"
+

@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=i3wm custom __USERNAME__ Session
+Exec=/home/__USERNAME__/.rc/local.conf.d/session_launcher.sh
+Type=Application
