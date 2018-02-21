@@ -83,9 +83,7 @@ i3wm_window = \
 - window:
     move floating: Mod+mouse_left_click
     resize floating: Mod+mouse_right_click
-    enter resize mode: Mod+r
-        resize: Mod+mouse_right_click
-    exit resize mode: Esc
+    resize: Mod+mouse_right_click
 """
 
 tmux_tips   = [tmux_cp, tmux_buffers, tmux_session, tmux_windows, tmux_panes]
