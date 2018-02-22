@@ -5,9 +5,10 @@ INSTALLATION
 ------------
 
 Run metascripts/full_setup.h for a full install.
+(aa user configured properly with sudo is a requirement at this point)
 
 This includes:
-    install_dependencies.sh: Installs all needed (and some optional) packages
+    install_packages.sh: Installs all needed (and some optional) packages
 
     default_config.sh: Creates the folder containing the configurations used by each one of the packages installed
 
@@ -22,7 +23,7 @@ CONFIGURATION
 
 Configuration files:
 
-After executing local.conf.d will be created containing all the respective configuration files used bu the packages installed. This includes configuration files for:
+After installation, the folder local.conf.d will be created containing the respective configuration files used by the packages installed. This includes configuration files for:
     gtk2
     gtk3
     compton (compositing manager that provides transparency, shadows, and other nice things for the window manager)
