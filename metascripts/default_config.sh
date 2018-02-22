@@ -12,6 +12,7 @@ vimrc="$HOME/.vimrc"
 vimdir="$HOME/.vim"
 tmuxconf="$HOME/.tmux.conf"
 i3conf="$conf_folder_i3/config"
+i3statusconf="$HOME/.i3status.conf"
 comptonconf="$HOME/.config/compton.conf"
 xresourcesconf="$HOME/.Xresources"
 gtk2conf="$HOME/.gtkrc-2.0"
@@ -24,6 +25,7 @@ custom_vimrc="$LOCALCONF_PATH/vim.conf"
 custom_vimdir="$LOCALCONF_PATH/vim.d"
 custom_tmuxconf="$LOCALCONF_PATH/tmux.conf"
 custom_i3conf="$LOCALCONF_PATH/i3.conf"
+custom_i3statusconf="$LOCALCONF_PATH/i3status.conf"
 custom_comptonconf="$LOCALCONF_PATH/compton.conf"
 custom_xresourcesconf="$LOCALCONF_PATH/Xresources.conf"
 custom_gtk2conf="$LOCALCONF_PATH/gtk2.conf"
@@ -36,6 +38,7 @@ template_vimrc="$TEMPLATES_PATH/vimrc"
 template_vimdir="$TEMPLATES_PATH/vim"
 template_tmuxconf="$TEMPLATES_PATH/tmux.conf"
 template_i3conf="$TEMPLATES_PATH/i3config"
+template_i3statusconf="$TEMPLATES_PATH/i3status.conf"
 template_comptonconf="$TEMPLATES_PATH/compton.conf"
 template_xresourcesconf="$TEMPLATES_PATH/Xresources"
 template_gtk2conf="$TEMPLATES_PATH/gtkrc-2.0"
@@ -55,7 +58,7 @@ function prepare {
 
 
 function set_config_file {
-	cp $template_main_config $HOME/.rc/local.conf.d/config.sh 
+	cp $template_main_config $HOME/.rc/local.conf.d/config.sh
 }
 
 function set_component {
@@ -87,8 +90,9 @@ function set_all_components {
     set_component "$vimdir"         "$custom_vimdir"        "$template_vimdir"
     set_component "$tmuxconf"       "$custom_tmuxconf"      "$template_tmuxconf"
     set_component "$i3conf"         "$custom_i3conf"        "$template_i3conf"
+    set_component "$i3statusconf"   "$custom_i3statusconf"  "$template_i3statusconf"
     set_component "$comptonconf"    "$custom_comptonconf"   "$template_comptonconf"
-    set_component "$xresourcesconf"    "$custom_xresourcesconf"   "$template_xresourcesconf"
+    set_component "$xresourcesconf" "$custom_xresourcesconf" "$template_xresourcesconf"
     set_component "$gtk2conf"    "$custom_gtk2conf"   "$template_gtk2conf"
     set_component "$gtk3conf"    "$custom_gtk3conf"   "$template_gtk3conf"
     set_component "$dunstconf"    "$custom_dunstconf"   "$template_dunstconf"

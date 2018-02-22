@@ -28,6 +28,7 @@ After installation, the folder local.conf.d will be created containing the respe
     gtk3
     compton (compositing manager that provides transparency, shadows, and other nice things for the window manager)
     i3
+    i3status (the statusbar / panel of the desktop)
     Xresources (x11 configuration: dpi, cursor size, font size, aliasing, hinting, etc)
     bash
     zsh
