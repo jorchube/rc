@@ -10,6 +10,7 @@ xrdb -merge ./.Xresources
 # DAEMONS AND SERVICES
 #----------------------
 /usr/bin/compton &
+/usr/bin/pasystray &
 /usr/bin/nm-applet &
 
 

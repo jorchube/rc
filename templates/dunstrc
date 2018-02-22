@@ -1,5 +1,5 @@
 [global]
-font = Iosevka Term 24
+font = Iosevka Term 12
 
 # Allow a small subset of html markup:
 #   <b>bold</b>
@@ -79,7 +79,7 @@ shrink = no
 # The transparency of the window.  Range: [0; 100].
 # This option will only work if a compositing windowmanager is
 # present (e.g. xcompmgr, compiz, etc.).
-transparency = 5
+transparency = 15
 
 # Don't remove messages, if the user is idle (no mouse or keyboard input)
 # for longer than idle_threshold seconds.
@@ -155,7 +155,7 @@ max_icon_size = 80
 icon_folders = /usr/share/icons/Paper/16x16/mimetypes/:/usr/share/icons/Paper/48x48/status/:/usr/share/icons/Paper/16x16/devices/:/usr/share/icons/Paper/48x48/notifications/:/usr/share/icons/Paper/48x48/emblems/
 
 [frame]
-width = 4
+width = 2
 color = "#4a90d9"
 
 [shortcuts]
