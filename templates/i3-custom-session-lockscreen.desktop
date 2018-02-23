@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Lock Screen
-Exec=/usr/bin/i3lock -c 202020
+Exec=i3lock -c 202020
 Terminal=false
 Type=Application
 StartupNotify=false

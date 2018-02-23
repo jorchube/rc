@@ -9,9 +9,9 @@ xrdb -merge ./.Xresources
 #----------------------
 # DAEMONS AND SERVICES
 #----------------------
-/usr/bin/compton &
-/usr/bin/pasystray &
-/usr/bin/nm-applet &
+compton &
+pasystray &
+nm-applet &
 
 
 #-------------------------
@@ -42,9 +42,4 @@ xrdb -merge ./.Xresources
 # WINDOW MANAGER
 #---------------
 #This can not run in bg; thus has to be started last:
-
-# Upstream i3:
 i3
-
-#i3-gaps:
-#/opt/bin/i3
