@@ -1,4 +1,20 @@
-(All credits to the authors)
+This project is a collection of scripts intended to simplify a minimal working setup with i3 as a desktop/window manager and a few apps. It installs packages such as:
+    
+    - i3-gaps (window manager)
+    - compton* (compositing manager)
+    - pcmanfm (file manager)
+    - file-roller (compressor/decompressor)
+    - nm-applet (network maanger)
+    - atom (text editor)
+    - gpicview (image viewer)
+    - pulseaudio systray (sound manager applet)
+    - mate-terminal (terminal emulator)
+
+* The version of compton installed is a fork created of the original one, with a patch written by me to add support for a different shadow color in focused windows.
+
+Furthermore, The installation script makes all the relevant configuration files appear under a single folder: ~/.rc/local.conf.d for easier accessibility.
+
+
 
 ------------
 INSTALLATION
@@ -13,7 +29,6 @@ This includes:
     default_config.sh: Creates the folder containing the configurations used by each one of the packages installed
 
     install_custom_i3_session.sh: Installs several .desktop files in order to be able to start a desktop sesssion with a desktop manager
-
 
 
 
@@ -42,3 +57,6 @@ There is also a config.sh which enables some features both for bash and zsh
 Session management:
 
 The file local.donf.d/session_launcher.h launches the various daemons and programs that are to be started with the session. This is where other commands and programs should be placed to be started during the session init.
+
+
+(All credits to the authors)
