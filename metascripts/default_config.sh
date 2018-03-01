@@ -18,6 +18,7 @@ xresourcesconf="$HOME/.Xresources"
 gtk2conf="$HOME/.gtkrc-2.0"
 gtk3conf="$conf_folder_gtk3/settings.ini"
 dunstconf="$conf_folder_dunst/dunstrc"
+roficonf=""
 
 custom_bashrc="$LOCALCONF_PATH/bash.conf"
 custom_zshrc="$LOCALCONF_PATH/zsh.conf"
@@ -31,6 +32,7 @@ custom_xresourcesconf="$LOCALCONF_PATH/Xresources.conf"
 custom_gtk2conf="$LOCALCONF_PATH/gtk2.conf"
 custom_gtk3conf="$LOCALCONF_PATH/gtk3.conf"
 custom_dunstconf="$LOCALCONF_PATH/dunst.conf"
+custom_roficonf="$LOCALCONF_PATH/rofi.conf"
 
 template_bashrc="$TEMPLATES_PATH/bashrc"
 template_zshrc="$TEMPLATES_PATH/zshrc"
@@ -44,6 +46,7 @@ template_xresourcesconf="$TEMPLATES_PATH/Xresources"
 template_gtk2conf="$TEMPLATES_PATH/gtkrc-2.0"
 template_gtk3conf="$TEMPLATES_PATH/gtk3.settings.ini"
 template_dunstconf="$TEMPLATES_PATH/dunstrc"
+template_roficonf="$TEMPLATES_PATH/rofi.conf"
 
 template_main_config="$TEMPLATES_PATH/config.sh"
 
@@ -66,7 +69,7 @@ function set_component {
     custom_config=$2
     template=$3
 
-	echo -n "Preparing $system_component ..."
+	echo -n "Preparing $custom_config ..."
 
     prepare "$system_component"
 
@@ -76,10 +79,11 @@ function set_component {
         cp "$template" "$custom_config"
     fi
 
-    rm -rf "$system_component" 2> /dev/null
-
-    ln -s "$custom_config" "$system_component"
-
+    if [ -e "$system_component" ]; then
+        rm -rf "$system_component" 2> /dev/null
+        ln -s "$custom_config" "$system_component"
+    fi
+    
     echo " OK"
 }
 
@@ -96,6 +100,7 @@ function set_all_components {
     set_component "$gtk2conf"    "$custom_gtk2conf"   "$template_gtk2conf"
     set_component "$gtk3conf"    "$custom_gtk3conf"   "$template_gtk3conf"
     set_component "$dunstconf"    "$custom_dunstconf"   "$template_dunstconf"
+    set_component "$roficonf"       "$custom_roficonf"     "$template_roficonf"
 }
 
 mv "$LOCALCONF_PATH" "$LOCALCONF_PATH.$oldext"
