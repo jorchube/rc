@@ -2,56 +2,6 @@
 
 source ./common.include
 
-conf_folder_i3="$HOME/.config/i3"
-conf_folder_gtk3="$HOME/.config/gtk-3.0"
-conf_folder_dunst="$HOME/.config/dunst"
-
-bashrc="$HOME/.bash_profile"
-zshrc="$HOME/.zshrc"
-vimrc="$HOME/.vimrc"
-vimdir="$HOME/.vim"
-tmuxconf="$HOME/.tmux.conf"
-i3conf="$conf_folder_i3/config"
-i3statusconf="$HOME/.i3status.conf"
-comptonconf="$HOME/.config/compton.conf"
-xresourcesconf="$HOME/.Xresources"
-gtk2conf="$HOME/.gtkrc-2.0"
-gtk3conf="$conf_folder_gtk3/settings.ini"
-dunstconf="$conf_folder_dunst/dunstrc"
-roficonf=""
-
-custom_bashrc="$LOCALCONF_PATH/bash.conf"
-custom_zshrc="$LOCALCONF_PATH/zsh.conf"
-custom_vimrc="$LOCALCONF_PATH/vim.conf"
-custom_vimdir="$LOCALCONF_PATH/vim.d"
-custom_tmuxconf="$LOCALCONF_PATH/tmux.conf"
-custom_i3conf="$LOCALCONF_PATH/i3.conf"
-custom_i3statusconf="$LOCALCONF_PATH/i3status.conf"
-custom_comptonconf="$LOCALCONF_PATH/compton.conf"
-custom_xresourcesconf="$LOCALCONF_PATH/Xresources.conf"
-custom_gtk2conf="$LOCALCONF_PATH/gtk2.conf"
-custom_gtk3conf="$LOCALCONF_PATH/gtk3.conf"
-custom_dunstconf="$LOCALCONF_PATH/dunst.conf"
-custom_roficonf="$LOCALCONF_PATH/rofi.conf"
-
-template_bashrc="$TEMPLATES_PATH/bashrc"
-template_zshrc="$TEMPLATES_PATH/zshrc"
-template_vimrc="$TEMPLATES_PATH/vimrc"
-template_vimdir="$TEMPLATES_PATH/vim"
-template_tmuxconf="$TEMPLATES_PATH/tmux.conf"
-template_i3conf="$TEMPLATES_PATH/i3config"
-template_i3statusconf="$TEMPLATES_PATH/i3status.conf"
-template_comptonconf="$TEMPLATES_PATH/compton.conf"
-template_xresourcesconf="$TEMPLATES_PATH/Xresources"
-template_gtk2conf="$TEMPLATES_PATH/gtkrc-2.0"
-template_gtk3conf="$TEMPLATES_PATH/gtk3.settings.ini"
-template_dunstconf="$TEMPLATES_PATH/dunstrc"
-template_roficonf="$TEMPLATES_PATH/rofi.conf"
-
-template_main_config="$TEMPLATES_PATH/config.sh"
-
-oldext="old"
-
 function prepare {
 	if [[ -e $1 ]]; then
 		mv $1 $1.$oldext
@@ -60,8 +10,9 @@ function prepare {
 }
 
 
-function set_config_file {
-	cp $template_main_config $HOME/.rc/local.conf.d/config.sh
+function set_config_files {
+	cp $template_sh_config $custom_sh_config
+    cp $template_ui_config $custom_ui_config
 }
 
 function set_component {
@@ -97,10 +48,10 @@ function set_all_components {
     set_component "$i3statusconf"   "$custom_i3statusconf"  "$template_i3statusconf"
     set_component "$comptonconf"    "$custom_comptonconf"   "$template_comptonconf"
     set_component "$xresourcesconf" "$custom_xresourcesconf" "$template_xresourcesconf"
-    set_component "$gtk2conf"    "$custom_gtk2conf"   "$template_gtk2conf"
-    set_component "$gtk3conf"    "$custom_gtk3conf"   "$template_gtk3conf"
-    set_component "$dunstconf"    "$custom_dunstconf"   "$template_dunstconf"
-    set_component "$roficonf"       "$custom_roficonf"     "$template_roficonf"
+    set_component "$gtk2conf"       "$custom_gtk2conf"      "$template_gtk2conf"
+    set_component "$gtk3conf"       "$custom_gtk3conf"      "$template_gtk3conf"
+    set_component "$dunstconf"      "$custom_dunstconf"     "$template_dunstconf"
+    set_component "$roficonf"       "$custom_roficonf"      "$template_roficonf"
 }
 
 mv "$LOCALCONF_PATH" "$LOCALCONF_PATH.$oldext"
@@ -111,4 +62,4 @@ mkdir "$conf_folder_gtk3" 2> /dev/null
 mkdir "$conf_folder_dunst" 2> /dev/null
 
 set_all_components
-set_config_file
+set_config_files

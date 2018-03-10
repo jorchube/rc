@@ -1,0 +1,21 @@
+
+declare -A UI_OPTION=(
+
+    ["DESKTOP_WALLPAPER"]="~/.rc/local.conf.d/wallpaper.png"
+    ["THEME"]="Adwaita-dark"
+    ["ICON_THEME"]="Numix"
+    
+    ["DPI"]="96"
+    
+    ["CURSOR_SIZE"]="24"
+    
+    ["STATUS_BAR_FONT_SIZE"]="10"
+    ["NOTIFICATIONS_FONT_SIZE"]="12"
+    ["PROGRAM_LAUNCHER_FONT_SIZE"]="16"
+    
+    ["MARGIN_GAP_BETWEEN_WINDOWS"]="15"
+    
+    ["WINDOW_SHADOW_COLOR"]="#000000"
+    ["FOCUSED_WINDOW_SHADOW_COLOR"]="#4a90d9"
+
+)

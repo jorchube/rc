@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Suspend system
+Exec=systemctl suspend
+Terminal=false
+Type=Application
+StartupNotify=false

@@ -33,8 +33,8 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 
-new_window pixel 2
-new_float pixel 2
+new_window pixel 1
+new_float pixel 1
 #for_window [class="[.]*"] floating enable
 
 
@@ -165,8 +165,8 @@ bar {
     status_command i3status
 }
 
-#gaps inner 15
-#gaps outer 0
+gaps inner 15
+gaps outer 0
 
 #default colors:
 # class                 border  backgr. text    indicator child_border
@@ -181,7 +181,7 @@ bar {
 
 # class                 border  backgr. text    indicator child_border
 # -- Adwaita --
-#client.focused           #4a90d9 #4a90d9 #ffffff #8efec4   #4a90d9
+client.focused           #4a90d9 #4a90d9 #ffffff #4a90d9   #4a90d9
 # client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 # client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 # client.urgent           #2f343a #900000 #ffffff #900000   #900000

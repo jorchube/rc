@@ -9,8 +9,11 @@ BASIC="$bold$PROMPT_OPEN$PROMPT_USER$PROMPT_AT$PROMPT_HOST $PROMPT_DIR$PROMPT_CL
 MEDIUM="$bold$PROMPT_USER $reset$PROMPT_DIR
 $bold>$reset "
 
-MEDIUM="$bold$PROMPT_USER $reset$PROMPT_DIR
-$bold> $reset"
+MEDIUM_HOST_COLOR="$bold$PROMPT_USER $reset$bold_gray_fg$PROMPT_HOST $reset$bold_blue_fg$PROMPT_DIR$reset
+$bold_fg>$reset "
+
+MEDIUM_COLOR="$bold$PROMPT_USER $reset$bold_blue_fg$PROMPT_DIR$reset
+$bold_fg>$reset "
 
 POWERLINE="$bold_blue_bg $PROMPT_USER $reset $gray_fg$PROMPT_HOST $bold$PROMPT_DIR
 $bold_blue_fg> $reset"
@@ -18,10 +21,7 @@ $bold_blue_fg> $reset"
 POWERLINE_LITE="$bold_blue_bg $PROMPT_USER $reset $gray_fg$PROMPT_DIR
 $bold_blue_fg> $reset"
 
-EXIT_STPROMPT_ATUS="$gray_fg$PROMPT_OPENresult: $?$PROMPT_CLOSE
-$reset$PROMPT_OPEN$bold_blue_fg$PROMPT_USER$reset$PROMPT_AT$blue_fg$PROMPT_HOST $gray_fg$PROMPT_DIR$reset$PROMPT_CLOSE$PROMPT_IND "
-
-REDHPROMPT_AT_COLORED="$reset$PROMPT_OPEN$bold_green_fg$PROMPT_USER$reset$PROMPT_AT$green_fg$PROMPT_HOST $gray_fg$PROMPT_DIR$reset$PROMPT_CLOSE$PROMPT_IND "
+REDHAT_COLORED="$reset$PROMPT_OPEN$bold_green_fg$PROMPT_USER$reset$PROMPT_AT$green_fg$PROMPT_HOST $gray_fg$PROMPT_DIR$reset$PROMPT_CLOSE$PROMPT_IND "
 
 MINI_GRAY="$reset$PROMPT_OPEN$gray_fg$PROMPT_USER$reset $bold_gray_fg$PROMPT_DIR$reset$PROMPT_CLOSE$PROMPT_IND "
 

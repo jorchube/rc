@@ -1,5 +1,11 @@
 #!/bin/bash
 
+
+#------------------------
+# PARSE UI SETTINGS
+#------------------------
+~/.rc/metascripts/config_ui_parser.sh > "/tmp/i3-custom.out" 2>&1
+
 #------------------------
 # XSERVER CLIENTS OPTIONS
 #------------------------
