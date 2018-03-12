@@ -41,7 +41,7 @@ nm-applet &
 #------------------
 # DESKTOP WALLPAPER
 #------------------
-# feh --bg-scale ~/.rc/local.conf.d/wallpaper.png 
+feh --bg-scale ~/.rc/local.conf.d/wallpaper.png 
 
 
 #---------------
